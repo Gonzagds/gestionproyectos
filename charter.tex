@@ -1,28 +1,28 @@
 \documentclass[11pt]{charter}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Diseño de un indicador de peso de gama media} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
-%\posgrado{Carrera de Especialización en Sistemas Embebidos} 
-\posgrado{Carrera de Especialización en Internet de las Cosas} 
+\posgrado{Carrera de Especialización en Sistemas Embebidos} 
+%\posgrado{Carrera de Especialización en Internet de las Cosas} 
 %\posgrado{Carrera de Especialización en Intelegencia Artificial}
 %\posgrado{Maestría en Sistemas Embebidos} 
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Nombre del Autor} 
+\autor{Sanchez Gonzalo Daniel} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
-\pertenenciaDirector{pertenencia} 
+\director{Ing. Ezequiel Marengo}
+\pertenenciaDirector{Sipel S.R.L.} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{Mgtr. Ivan Barenboim}
+\empresaCliente{Sipel S.R.L.}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
 \juradoUno{Nombre y Apellido (1)}
@@ -32,9 +32,9 @@
 \juradoTres{Nombre y Apellido (3)}
 \pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{25 de agosto de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaINICIO{23 de octubre de 2020}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlanificacion{13 de octubre de 2020} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{22 de agosto de 2021}		%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{11 de diciembre de 2021}		%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -62,12 +62,12 @@
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
-1.0      & Creación del documento                                          & 27/06/2020 \\ \hline
-1.1      & Avances en alguna cosa                                          & dd/mm/aaaa \\ \hline
-1.2      & Otro ejemplo \newline
-		   Con texto partido \newline
-		   En varias líneas \newline
-		   A propósito                                                     & dd/mm/aaaa \\ \hline
+1.0      & Creación del documento                                          & 23/10/2020 \\ \hline
+%1.1      & Avances hasta punto 6 inclusive                                 & 06/11/2020 \\ \hline
+%1.2      & Otro ejemplo \newline
+%		   Con texto partido \newline
+%		   En varias líneas \newline
+%		   A propósito                                                     & dd/mm/aaaa \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -84,7 +84,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de control de temperatura de un calefón, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la selección de la tecnología adecuada, el diseño de los circuitos esquemáticos y la generación del código fuente necesario para el desarrollo de una nueva familia de indicadores y controladores de peso que reemplace a familia de indicadores de gama media que la empresa Sipel S.R.L. fabrica y comercializa actualmente. También se generará la documentación pertinente para realizar una transferencia tecnológica que le permita a la empresa el posterior mantenimiento o modificación del producto final. El código fuente generado será testeado sobre un prototipo cuya construcción estará a cargo de la empresa o en su defecto sobre una plataforma de desarrollo (development kit) acorde a la tecnología seleccionada para el diseño. El proyecto tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -107,54 +107,91 @@ Se adjunta a esta acta la planificación inicial.
 \section{Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red}
-El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
-Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
+%\begin{consigna}{red}
+%El objetivo es que el lector en una o dos páginas entienda de qué se trata el proyecto y cuáles son sus desafíos, su motivación y su importancia.
+%Se debe destacar claramente cuál es el valor que agrega el proyecto a realizar. ``El presente proyecto se destaca especialmente por incorporar tal cosa... Esto lo diferencia de otros sistemas similares en que ...''
+%
+%Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+%
+%\begin{itemize}
+%\item ¿Cómo se vincula este proyecto con la misión de la organización?
+%\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
+%\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
+%\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
+%\item ¿Cuales son las necesidades que debe satisfacer?
+%\item ¿Por dónde pasa la innovación?
+%\end{itemize}
+%
+%La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+%
+%\vspace{25px}
+%
+%\begin{figure}[htpb]
+%\centering 
+%\includegraphics[width=.7\textwidth]{./Figuras/diagBloques.png}
+%\caption{Diagrama en bloques del sistema}
+%\label{fig:diagBloques}
+%\end{figure}
+%
+%\vspace{25px}
+%
+%El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
+%\end{consigna}
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+En los recientes años la empresa Sipel S.R.L. comenzó a reemplazar su gama de indicadores de peso basados en procesadores de 8 bits (procesadores de la familia 8085 mayormente) por nuevos modelos basados en procesadores de 32 bits con el objetivo de ofrecer mayores prestaciones y a menor costo. Durante este proceso se diseñaron y lanzaron al mercado dos nuevos modelos de indicadores, el indicador de tope de gama “Onix” (\url{https://www.sipel.com.ar/es/producto/onix}) y el indicador de peso NEO (\url{https://www.sipel.com.ar/es/producto/neo}) como indicador de entrada de gama mientras que los indicadores de peso de gama media ORION y ATLAS  aún están basados en procesadores de 8 bits y deben ser rediseñados.\\
 
-\begin{itemize}
-\item ¿Cómo se vincula este proyecto con la misión de la organización?
-\item ¿Cómo se inserta este proyecto en el modelo de negocio de la organización?
-\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-\item ¿En qué estado del ciclo de vida está el producto que se desea reemplazar o mejorar?
-\item ¿Cuales son las necesidades que debe satisfacer?
-\item ¿Por dónde pasa la innovación?
+Habiendo lanzado al mercado los equipos NEO y ONIX y se realizó un estudio de mercado con el cual la empresa ha concluido que el mercado de indicadores de baja gama o de entrada de gama (NEO) es un mercado poco competitivo y saturado por equipos de bajo costo principalmente provenientes de China. También se concluyó  que estos equipos son poco requeridos en el mercado de pesaje industrial él cual es el principal nicho de mercado de interés de la empresa. En este contexto la empresa plantea la necesidad de diseñar un nuevo equipo que fusione el costo competitivo de la línea de baja gama con las prestaciones de los equipos de media gama y asi terminar de modernizar toda la familia de indicadores de peso de la empresa. De dicho estudió  también se desprendió la necesidad de dotar a los nuevos dispositivos con funcionalidades de conexión Wi-Fi y funcionalidades IoT de crecientes demanda en el mercado.\\
+
+Los indicadores de peso son instrumentos de medición que conectados a un receptor de carga conforman una balanza o instrumento de pesaje. Los receptores de carga normalmente se basan en celdas de carga las cuales son piezas metálicas con Galgas extensiométricas pegadas a ellas y que al sufrir una deformación mecánica por una fuerza aplicada varían la resistencia eléctrica de manera aproximadamente lineal a la fuerza aplicada. Todas las celdas de carga comerciales tienen aproximadamente el mismo rango de tensión de alimentación, similares impedancias de las galgas y por ende similares rangos señal de salida independientemente de su capacidad de peso (máxima fuerza aplicada admitida), lo que permite que un mismo indicador de peso debidamente diseñado pueda ser conectado diversas configuraciones de receptores de carga con diversas capacidades de peso máximo y distintas apreciaciones. De esta manera, el mismo equipo electrónico puede ser utilizado en diversas aplicaciones de pesaje industriales y/o comerciales según a qué tipo de receptor de carla sea conectado.
+
+
+Genéricamente un indicador de peso digital tiene los siguiente bloques constitutivos:
+\begin{itemize} 
+\item[•] Una fuente regulada de tensión para alimentar las celdas de carga.
+\item[•] Conversor análogo-digital para leer la señal proveniente de las celdas de carga (salida del puente).
+\item[•] Microprocesador para convertir las cuentas de ADC a una magnitud expresada en unidades de peso (kilogramo comúnmente), manejo de display, teclado, comunicaciones, etc.
+\item[•] Memoria no volátil para guardar los datos de calibración (cap. máx, incremento, cero y span) datos de configuración (configuraciones de puerto serie, etc) y totalizadores (peso total acumulado, cantidad de pesos registrados o número de ticket, etc).
+\item[•] Display para mostrar la lectura del peso con indicadores de movimiento, de centro de cero y de tara tomada (indicadores obligatorios por ley en la República Argentina).
+\item[•] Teclado que contiene al menos las teclas de toma de cero y de toma de tara y las que sean necesarias para la operatoria básica del equipo como ser su calibración (selección de capacidad máxima, selección de incrementó, toma de cero y toma span con pesas patrones) y configuraciones tales como parametrización del puerto serie.
 \end{itemize}
 
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema }y una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''. Luego recién más abajo de haber puesto esta frase se pone la figura. La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+En el caso particular del proyecto en cuestión, se pueden mencionar también los siguientes bloques adicionales:
+\begin{itemize}
+\item[•]Puerto de comunicación serie (RS232/RS485) para múltiples propósitos como ser comunicación con impresoras de ticket, comunicación con PLC’s (protocolo modbus RTU), envío de lectura de peso a PC (texto plano), etc.
+\item[•]Modulo Wi-Fi para envío de información estadística a la nube o captura de peso en tiempo real  desde software online o aplicación de escritorio.
+\item[•]Puerto de expansión I2C para agregado de placa opcional de manejo de entradas/salidas de potencia para comando de diversos procesos de automatismo (sirenas en modos de alto/bajo/ok, procesos de embolsado de grano, proceso de dosificado, etc).
+\item[•]Módulo opcional para uso de batería interna (control de carga).
+\end{itemize}
+
+En la Figura \ref{fig:diagBloques} se muestra un diagrama simplificado con los bloques mencionados
 
 \vspace{25px}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.7\textwidth]{./Figuras/diagBloques.png}
+\includegraphics[width=.7\textwidth]{./Figuras/esquema.png}
 \caption{Diagrama en bloques del sistema}
 \label{fig:diagBloques}
 \end{figure}
 
 \vspace{25px}
 
-El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
-\end{consigna}
-
-
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
 
 \begin{consigna}{red} 
-Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
+%Nota: (borrar esto y todas las consignas en color rojo antes de entregar este documento).
  
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
+%Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos.
  
-Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
+%Si se considera que una persona cumple dos o más roles, entonces sólo dejarla en el rol más importante. Por ejemplo:
 
-\begin{itemize}
-\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
-\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
-\end{itemize}
+%\begin{itemize}
+%\item Si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente.
+%\item Si una persona es el Responsable, no debe ser colocado también como Miembro del equipo.
+%\end{itemize}
 
-Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
+%Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por ejemplo.
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -164,32 +201,31 @@ Pero en cambio sí es usual que el Cliente y el Auspiciante sean el mismo, por e
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
 Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
+Cliente       & \clientename      &\empclientename & CEO       	\\ \hline
 Impulsor      &                   &              	&        	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Colaboradores &                   &              	&        	\\ \hline
-Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
+Orientador    & \supname	       & \pertesupname 	& Director	Trabajo final \\ \hline
+Equipo        &                   &              	&        	\\ \hline
 Opositores    &                   &              	&        	\\ \hline
 Usuario final &                   &              	&        	\\ \hline
 \end{tabularx}
 \end{table}
 
-El Director suele ser uno de los Orientadores.
-
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Sería deseable listar a continuación de la tabla las principales características de cada interesado.
- 
-Por ejemplo:
-\begin{itemize}
-\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
-\end{itemize}
+%El Director suele ser uno de los Orientadores.
+%
+%No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
+%
+%No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
+%
+%Sería deseable listar a continuación de la tabla las principales características de cada interesado.
+% 
+%Por ejemplo:
+%\begin{itemize}
+%\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
+%\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
+%\item Orientador: María Gómez, nos va a poder ayudar mucho con la gestión de impuestos.
+%\end{itemize}
 
 \end{consigna}
 
@@ -198,100 +234,179 @@ Por ejemplo:
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
+%\begin{consigna}{red}
+%¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
+%
+%Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
+%\end{consigna}
 
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
-\end{consigna}
+El propósito de este proyecto es asistir a la empresa Sipel S.R.L. en el desarrollo de un nuevo producto y nace de la necesidad por parte de la empresa de tercerizar parte del diseño electrónico de dicho desarrollo. Como resultado final del proyecto se pretende haber generado los esquemas electrónicos necesarios para la construcción de un prototipo, haber seleccionado las herramientas de desarrollo necesarias (compiladores, IDE, repositorios, etc.) con la documentación necesaria para su correcta instalación y uso y la generación  del código fuente que se ejecute sobre el prototipo y cumpliendo con los requerimientos funcionales del futuro producto.
+
 
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
+%\begin{consigna}{red}
+%¿Qué se incluye y que no se incluye en este proyecto?
+%
+%Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+%
+%Explicitar todo lo quede comprendido dentro del alcance del proyecto.
+%
+%Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
+%
+%\end{consigna}
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+El presente proyecto prevé la ejecución de las siguientes tareas:
+\begin{itemize}
+\item[•]Seleccionar los principales componentes como ser el microcontrolador, el módulo Wi-Fi, y el display a utilizar en el diseño.
+\item[•]Confeccionar los circuitos esquemáticos del producto indicando los valores y/o números de partes de los componentes. El tipo de encapsulado de cada componente y/o su marca sólo será sugerido pero la selección final quedará a cargo del responsable del diseño de circuito impreso salvo casos donde dicha selección sea crítica y se especifique puntualmente. 
+\item[•]También se podrán indicar, sólo en caso de ser necesario, pautas para el diseño del PCB como ser impedancias características de      pistas, distribución sugerida de los componentes  por consideraciones de compatibilidad electromagnética o en caso de existir más de un PCB precauciones a tomar en el interconexionado de los mismos. 
+\item[•]Desarrollo y testeo del código fuente del microprocesador y del módulo Wi-Fi en caso de seleccionarse un módulo programable. 
+\item[•]Generar la documentación correspondiente a los ítems anteriores.
+\item[•]Generar una transferencia tecnológica que le permita a la empresa asimilar y reutilizar toda nueva tecnología que se emplee en el diseño. 
+\end{itemize}
 
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
-
-\end{consigna}
-
+Quedarán excluidas del proyecto y a cargo de Sipel S.R.L. las siguientes tareas:
+\begin{itemize}
+\item[•]Diseño del/los circuito(s) impreso(s) y la selección final de los encapsulados de los componentes a utilizar salvo casos  donde hayan sido expresamente indicados. Durante el diseño del PCB se podrá generar un proceso iterativo de      revisión y rediseño de los esquemáticos siempre que sea necesario.
+\item[•]Diseño estético y de gabineteria del equipo.
+\item[•]Realizar los dos ítems anteriores con las consideraciones necesarias para que el equipo pueda aprobar satisfactoriamente los ensayos electromagnéticos requeridos para su aprobación legal.
+\item[•]Realizar los ensayos metrológicos y de compatibilidad electromagnética necesarios para la aprobación legal del indicador así como también generar  todos los expedientes legales requeridos a tal fin.
+\item[•]Diseño del packaging del producto.
+\item[•]Confección de manuales de usuario, guías rápidas de uso, etc.
+\item[•]Diseño de toda placa auxiliar que interactúe con el equipo como ser entradas/salidas de potencia, módulos opto-aislados para protección de puerto serie, conversor RS232 a 4-20mA, etc.
+\end{itemize}
 
 \section{3. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+
+Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-\item Supuesto 1
-\item Supuesto 2...
+\item[•] La empresa Sipel S.R.L. proveerá todas las herramientas y materiales necesarios para la ejecución del proyecto incluyendo:
+	\begin{itemize}
+	\item licencias de software.
+	\item placas o kits de desarrollo.
+	\item conversores de protocolo (Ejemplo USB to RS232), fuentes de alimentación, router Wi-Fi, etc.
+	\end{itemize}
+\item[•] La empresa Sipel S.R.L. hará el uso necesario de sus recursos para cumplir sus obligaciones en el tiempo y forma pactados durante el desarrollo del proyecto.
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-\end{consigna}
+%Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
+
 
 \section{4. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
+%\begin{consigna}{red}
+%Los requerimientos deben numerarse y de ser posible agruparlos por afinidad:
+%
+%\begin{enumerate}
+%\item Grupo de requerimientos asociados con...
+%	\begin{enumerate}
+%	\item Requerimiento 1
+%	\item Requerimiento 2
+%	\item Requerimiento 3 (prioridad menor)
+%	\end{enumerate}
+%\item Grupo de requerimientos asociados con...
+%	\begin{enumerate}
+%	\item Requerimiento 1
+%	\item Requerimiento 2 (prioridad menor)
+%	\end{enumerate}
+%\end{enumerate}
+%
+%Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
+%
+%De ser posible indicar cómo se obtuvieron cada uno de los requerimientos 
+%
+%Indicar claramente cuál es la prioridad entre los distintos requerimientos. 
+%
+%No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
+%
+%Y al escribirlos seguir las siguientes reglas:
+%\begin{itemize}
+%\item Ser breve y conciso (nadie lee cosas largas). 
+%\item Ser específico: no dejar lugar a confusiones.
+%\item Expresar los requerimientos en términos que sean cuantificables y medibles.
+%\end{itemize}
+%
+%\end{consigna}
 
 \begin{enumerate}
-\item Grupo de requerimientos asociados con...
+\item Costo
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2
-	\item Requerimiento 3 (prioridad menor)
+	\item El producto (solo la electrónica) tiene un costo objetivo de U\$S 35 \color{red} costo tentativo que debe ser confirmado por la empresa.
 	\end{enumerate}
-\item Grupo de requerimientos asociados con...
+\item Interfaz de usuario y conectividad
 	\begin{enumerate}
-	\item Requerimiento 1
-	\item Requerimiento 2 (prioridad menor)
+	\item Teclado con 5 teclas multifunción cuyas funciones principales con Encendido/Apagado, puesta a cero, toma de tara, imprimir ticket, cambio de función.
+	\item Display LCD con 8 dígitos, indicador de nivel de batería, indicadores metrológicos de centro de cero, movimiento y tara tomada, indicador unidad. Se deberá reutilizar el display utilizado actualmente en el equipo NEO.
+	\item Un puerto serie con interfaz RS232/RS485 seleccionable via jumpers, Baudrate configurable, lineas de handshake. El puerto serie podrá funcionar en las modalidades de transmisión continua del peso en formato ASCII con formato configurable, protocolo ModBus RTU esclavo, impresión de ticket para conexión a impresora de 32 lineas con formato configurable. 
+	\item Conexión Wi-Fi con antena interna o externa según sea para gabinetes metálicos o plásticos. El módulo Wi-Fi podrá funcionar en modo "access point" que permitirá conectarse desde otro dispositivo para configurar parámetros de acceso a la red Wi-Fi y en modo cliente para el resto de las funciones.
+	\item Manejo vía bus I2C de placa auxiliar de entradas/salidas de potencia.
 	\end{enumerate}
+\item Fuente de energía
+	\begin{enumerate}
+	\item El equipo se alimentará desde una fuente externa de 12Vcc.
+	\item Opcionalmente el equipo podrá contar con una batería interna con capacidad para uso continuo de 8 horas.
+	\item \color{red} aun no está definido si el circuito de control de carga de batería se implementará en una placa auxiliar o se implementará en el equipo estandar. Se definirá en las siguientes semanas con la empresa
+	\end{enumerate}
+\item Ajustes metrológicos
+	\begin{enumerate}
+	\item El equipo debe ser de clase III pudiendo manejar hasta 10.000 (diez mil) divisiones de display.
+	\item El acceso al menú de ajuste metrológicos debe estar protegido con un jumper interno que requiera la rotura de un precinto legal para ser accedido. 
+	\item El menú de ajustes metrologicos debe permitir seleccionar la capacidad máxima del indicador, el incremento y el la cantidad de posiciones decimales. Si la elección de capacidad e incremento es tal que se superen las 10.000 divisiones el equipo debe dar señal de error.
+	\item Este menú también debe permitir realizar las acciones de toma de cero de calibración y ajuste con peso patrón en hasta 3 puntos.
+	\end{enumerate}
+\item Almacenamiento de información
+	\begin{enumerate}
+	\item El equipo debe contar con una memoria no volátil para almacenar los parámetros de ajustes metrológicos, parámetros de configuración y totalizadores. 
+	\item Todos los datos almacenados en dicha memoria deben estar protegidos con un CRC que garantice su integridad al ser recuperados.
+	\item Es de preferencia el uso de memorias de tecnología ferromagnética por sus casi "infinitos" ciclos de escritura. 
+	\item Se debe analizar la posibilidad de incorporar una memoria micro SD al diseño si los costos lo permiten. De ser posible su incorporación, se contemplará en los circuitos esquemáticos y en el diseño del PCB pero NO será montada en el producto final ni se contemplará el código fuente que la controle. Esto quedará para futuras ampliaciones.
+	\end{enumerate}	
+\item Celdas de carga
+	\begin{enumerate}
+	\item El equipo debe admitir celdas de carga con relaciones excitación/señal de 1 mV/V, 2 mV/V y 3 mV/V.
+	\item Debe contar con una fuente de tensión regulada de 5V con baja deriva térmica exclusiva para la excitación de las celdas de carga.
+	\item Debe poder excitar hasta 12 celdas conectadas en paralelo de 750ohms cada una sin variaciones en su tensión de salida. 
+	\item Debe contar con una segunda salida de excitación regulada con un preset que permita la conexión y ecualización de dos celdas de carga. Para mas de dos celdas la ecualización se debe realizar mediante una caja de unión externa.
+	\item Para la lectura de la señal de salida de las celdas se deberá utilizar el ADC \textit{ADS1232} ya utilizado en otros diseños de la compañía por sus ya comprobadas prestaciones.
+	\end{enumerate}	
+\item El equipo debe implementar las siguientes funciones:
+	\begin{enumerate}
+	\item Peso (función por defecto).
+	\item Contador de piezas.
+	\item Conversión de unidad. 
+	\item Pesaje de ganado vivo.
+	\item Envasado con doble corte (requiere placa auxiliar de potencia).
+	\item Dosificador multiples componentes requiere placa auxiliar de potencia)
+	\item Automatismo programable requiere placa auxiliar de potencia).
+	\item \color{red} resta consensuar la lista definitiva de funciones a implementar.
+	\end{enumerate}				
 \end{enumerate}
 
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-De ser posible indicar cómo se obtuvieron cada uno de los requerimientos 
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-\item Ser breve y conciso (nadie lee cosas largas). 
-\item Ser específico: no dejar lugar a confusiones.
-\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
-
-\section{Historias de usuarios (\textit{Product backlog})}
-\label{sec:backlog}
-
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
-\end{consigna}
+%\section{Historias de usuarios (\textit{Product backlog})}
+%\label{sec:backlog}
+%
+%\begin{consigna}{red}
+%Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+%\end{consigna}
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Cosas como: 
 \begin{itemize}
-\item Manual de uso
-\item Diagrama esquemático
-\item Código fuente
-\item Diagrama de instalación
-\item Informe final
+\item Esquemáticos.
+\item Código fuente.
+\item Transferencia tecnológica
 
 \end{itemize}
 
-\end{consigna}
+
 
 \section{6. Desglose del trabajo en tareas}
 \label{sec:wbs}
