@@ -175,7 +175,7 @@ En la Figura \ref{fig:diagBloques} se muestra un diagrama simplificado con los b
 \end{figure}
 
 \vspace{25px}
-
+\newpage
 \section{Identificación y análisis de los interesados}
 \label{sec:interesados}
 
@@ -338,12 +338,12 @@ Para el desarrollo del presente proyecto se supone que:
 \begin{enumerate}
 \item Costo
 	\begin{enumerate}
-	\item El producto (solo la electrónica) tiene un costo objetivo de U\$S 35 \color{red} costo tentativo que debe ser confirmado por la empresa.
+	\item El producto (placa electrónica con display) tiene un costo objetivo de U\$S 35 \color{red} costo tentativo que debe ser confirmado por la empresa antes del mes de diciembre 2020.
 	\end{enumerate}
 \item Interfaz de usuario y conectividad
 	\begin{enumerate}
-	\item Teclado con 5 teclas multifunción cuyas funciones principales con Encendido/Apagado, puesta a cero, toma de tara, imprimir ticket, cambio de función.
-	\item Display LCD con 8 dígitos, indicador de nivel de batería, indicadores metrológicos de centro de cero, movimiento y tara tomada, indicador unidad. Se deberá reutilizar el display utilizado actualmente en el equipo NEO.
+	\item Teclado con 5 teclas multifunción cuyas funciones son Encendido/Apagado, puesta a cero, toma de tara, imprimir ticket, ingreso a menú, navegación.
+	\item Display LCD con 6 dígitos, indicador de nivel de batería, indicadores metrológicos (centro de cero, movimiento y tara tomada) e indicador unidad. Se deberá reutilizar el display utilizado actualmente en el equipo NEO.
 	\item Un puerto serie con interfaz RS232/RS485 seleccionable via jumpers, Baudrate configurable, lineas de handshake. El puerto serie podrá funcionar en las modalidades de transmisión continua del peso en formato ASCII con formato configurable, protocolo ModBus RTU esclavo, impresión de ticket para conexión a impresora de 32 lineas con formato configurable. 
 	\item Conexión Wi-Fi con antena interna o externa según sea para gabinetes metálicos o plásticos. El módulo Wi-Fi podrá funcionar en modo "access point" que permitirá conectarse desde otro dispositivo para configurar parámetros de acceso a la red Wi-Fi y en modo cliente para el resto de las funciones.
 	\item Manejo vía bus I2C de placa auxiliar de entradas/salidas de potencia.
@@ -352,7 +352,8 @@ Para el desarrollo del presente proyecto se supone que:
 	\begin{enumerate}
 	\item El equipo se alimentará desde una fuente externa de 12Vcc.
 	\item Opcionalmente el equipo podrá contar con una batería interna con capacidad para uso continuo de 8 horas.
-	\item \color{red} aun no está definido si el circuito de control de carga de batería se implementará en una placa auxiliar o se implementará en el equipo estandar. Se definirá en las siguientes semanas con la empresa
+	\item Durante el diseño del circuito esquemático se hará una evaluación de costos para definir si el circuito de control de carga de la batería se implementa dentro de la placa principal del equipo base o como una placa satélite opcional. 
+	\item No se implementará en el código fuente las funcionalidades de modo batería (nivel de batería, apagado automático de display, etc) debiendo implementarse en futuras revisiones a cargo de la empresa. 
 	\end{enumerate}
 \item Ajustes metrológicos
 	\begin{enumerate}
@@ -365,8 +366,7 @@ Para el desarrollo del presente proyecto se supone que:
 	\begin{enumerate}
 	\item El equipo debe contar con una memoria no volátil para almacenar los parámetros de ajustes metrológicos, parámetros de configuración y totalizadores. 
 	\item Todos los datos almacenados en dicha memoria deben estar protegidos con un CRC que garantice su integridad al ser recuperados.
-	\item Es de preferencia el uso de memorias de tecnología ferromagnética por sus casi "infinitos" ciclos de escritura. 
-	\item Se debe analizar la posibilidad de incorporar una memoria micro SD al diseño si los costos lo permiten. De ser posible su incorporación, se contemplará en los circuitos esquemáticos y en el diseño del PCB pero NO será montada en el producto final ni se contemplará el código fuente que la controle. Esto quedará para futuras ampliaciones.
+	\item Es de preferencia el uso de memorias de tecnología ferromagnética por sus casi infinitos ciclos de escritura. 
 	\end{enumerate}	
 \item Celdas de carga
 	\begin{enumerate}
@@ -380,12 +380,8 @@ Para el desarrollo del presente proyecto se supone que:
 	\begin{enumerate}
 	\item Peso (función por defecto).
 	\item Contador de piezas.
-	\item Conversión de unidad. 
-	\item Pesaje de ganado vivo.
 	\item Envasado con doble corte (requiere placa auxiliar de potencia).
-	\item Dosificador multiples componentes requiere placa auxiliar de potencia)
-	\item Automatismo programable requiere placa auxiliar de potencia).
-	\item \color{red} resta consensuar la lista definitiva de funciones a implementar.
+	\item El código fuente se debe estructurar de manera tal que permita en un futuro agregar funciones de forma estructurada y sencilla.
 	\end{enumerate}				
 \end{enumerate}
 
@@ -411,37 +407,67 @@ Para el desarrollo del presente proyecto se supone que:
 \section{6. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-Se recomienda mostrar el WBS mediante una lista indexada:
+
+%Se recomienda mostrar el WBS mediante una lista indexada:
 
 \begin{enumerate}
-\item Grupo de tareas 1
+\item Planificación
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Análisis requerimientos (16 hs)
+	\item planificación tareas (8 hs)
+	\item Documentar la planificación (8 hs)
 	\end{enumerate}
-\item Grupo de tareas 2
+\item Selección de arquitectura
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
+	\item Selección de microprocesador (24 hs)
+	\item Análisis de herramientas de desarrollo disponibles y sus costos (IDE, compilador, debugger, RTOS, suits o bibliotecas disponibles, etc.) (24 hs)
+	\item Selección modulo comunicación Wi-Fi (24 hs)
+	\item Selección kit(s) de desarrollo (8 hs)
 	\end{enumerate}
-	\item Grupo de tareas 3
+\item Desarrollo sobre kit desarrollo.
 	\begin{enumerate}
-	\item Tarea 1 (tantas hs)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas hs)
-	\item Tarea 4 (tantas hs)
-	\item Tarea 5 (tantas hs)
+	\item Instalación entorno(s) de desarrollo (24 hs)
+	\item Pruebas de compilación ejemplos y debbuging (8 hs)
+	\item Planteo estructura tareas RTOS	(32 hs)
+	\item Codificación rutinas lectura ADC (32 hs)
+	\item Codificación rutinas metrológicas (32 hs)
+	\item Codificación rutinas manejo puerto serie (16 hs)
+	\item Codificación rutinas impresión y transmisión continua (16 hs)
+	\item Codificación rutinas modbus RTU(24 hs)
+	\item Codificación rutinas atención de display y teclado (24 hs)
+	\item Codificación rutinas manejo módulo Wi-Fi modo access point(40 hs)
+	\item Codificación rutinas manejo módulo Wi-Fi transmisión de datos(40 hs)
+	\item Codificación rutinas menús de usuario (40 hs)
+	\item Codificación rutinas función peso(16 hs)
+	\item Codificación rutinas función contador de piezas(8 hs)
+	\item Codificación rutinas función envasado y manejo placa de potencia (24 hs)
 	\end{enumerate}
+\item Diseño electrónico
+	\begin{enumerate}
+	\item Diseño de esquemático(s) (32 hs)
+	\item Documentación información adicional para diseño PCB(8 hs)
+	\end{enumerate}	
+\item Diseño electrónico
+	\begin{enumerate}
+	\item Diseño de esquemático(s) (32 hs)
+	\item Documentación información adicional para diseño PCB(8 hs)
+	\end{enumerate}	
+\item Primer prototipo
+	\begin{enumerate}
+	\item Adaptación código fuente kit a prototipo (32 hs)
+	\item Pruebas firmware en prototipo (8 hs)
+	\end{enumerate}	
+\item Transferencia tecnológica
+	\begin{enumerate}
+	\item Redacción transferencia (40 hs)
+	\end{enumerate}					
 \end{enumerate}
 
-Cantidad total de horas: (tantas hs)
+Cantidad total de horas: (608 hs)
 
-Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
+%Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
 
-\end{consigna}
+
 
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
