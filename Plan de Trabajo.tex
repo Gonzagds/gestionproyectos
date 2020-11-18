@@ -14,14 +14,14 @@
 \autor{Sanchez Gonzalo Daniel} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Ing. Ezequiel Marengo}
+\director{Ezequiel Marengo}
 \pertenenciaDirector{Sipel S.R.L.} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Mgtr. Ivan Barenboim}
+\cliente{Ivan Barenboim}
 \empresaCliente{Sipel S.R.L.}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
@@ -63,7 +63,7 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento                                          & 23/10/2020 \\ \hline
-%1.1      & Avances hasta punto 6 inclusive                                 & 06/11/2020 \\ \hline
+1.1      & Se agregan historias de usuario y se corrigen observaciones a la primer entrega                                 & 13/11/2020 \\ \hline
 %1.2      & Otro ejemplo \newline
 %		   Con texto partido \newline
 %		   En varias líneas \newline
@@ -84,7 +84,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la selección de la tecnología adecuada, el diseño de los circuitos esquemáticos y la generación del código fuente necesario para el desarrollo de una nueva familia de indicadores y controladores de peso que reemplace a familia de indicadores de gama media que la empresa Sipel S.R.L. fabrica y comercializa actualmente. También se generará la documentación pertinente para realizar una transferencia tecnológica que le permita a la empresa el posterior mantenimiento o modificación del producto final. El código fuente generado será testeado sobre un prototipo cuya construcción estará a cargo de la empresa o en su defecto sobre una plataforma de desarrollo (development kit) acorde a la tecnología seleccionada para el diseño. El proyecto tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la selección de la tecnología adecuada, el diseño de los circuitos esquemáticos y la generación del código fuente necesario para el desarrollo de una nueva familia de indicadores y controladores de peso que reemplace a familia de indicadores de gama media que la empresa Sipel S.R.L. fabrica y comercializa actualmente. También se generará la documentación pertinente para realizar una transferencia tecnológica que le permita a la empresa el posterior mantenimiento o modificación del producto final. El código fuente generado será testeado sobre un prototipo cuya construcción estará a cargo de la empresa o en su defecto sobre una plataforma de desarrollo (development kit) acorde a la tecnología seleccionada para el diseño. El proyecto tendrá un presupuesto preliminar estimado de 608 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -138,9 +138,9 @@ Se adjunta a esta acta la planificación inicial.
 %El tamaño de la tipografía en la figura debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama.
 %\end{consigna}
 
-En los recientes años la empresa Sipel S.R.L. comenzó a reemplazar su gama de indicadores de peso basados en procesadores de 8 bits (procesadores de la familia 8085 mayormente) por nuevos modelos basados en procesadores de 32 bits con el objetivo de ofrecer mayores prestaciones y a menor costo. Durante este proceso se diseñaron y lanzaron al mercado dos nuevos modelos de indicadores, el indicador de tope de gama “Onix” (\url{https://www.sipel.com.ar/es/producto/onix}) y el indicador de peso NEO (\url{https://www.sipel.com.ar/es/producto/neo}) como indicador de entrada de gama mientras que los indicadores de peso de gama media ORION y ATLAS  aún están basados en procesadores de 8 bits y deben ser rediseñados.\\
+En los recientes años la empresa Sipel S.R.L. comenzó a reemplazar su gama de indicadores de peso basados en procesadores de 8 bits por nuevos modelos basados en procesadores de 32 bits con el objetivo de ofrecer mayores prestaciones y a menor costo. Durante este proceso se diseñaron y lanzaron al mercado dos nuevos modelos de indicadores, el indicador de tope de gama “Onix” (\url{https://www.sipel.com.ar/es/producto/onix}) y el indicador de peso NEO (\url{https://www.sipel.com.ar/es/producto/neo}) como indicador de entrada de gama mientras que los indicadores de peso de gama media ORION y ATLAS  aún están basados en procesadores de 8 bits y deben ser rediseñados.\\
 
-Habiendo lanzado al mercado los equipos NEO y ONIX y se realizó un estudio de mercado con el cual la empresa ha concluido que el mercado de indicadores de baja gama o de entrada de gama (NEO) es un mercado poco competitivo y saturado por equipos de bajo costo principalmente provenientes de China. También se concluyó  que estos equipos son poco requeridos en el mercado de pesaje industrial él cual es el principal nicho de mercado de interés de la empresa. En este contexto la empresa plantea la necesidad de diseñar un nuevo equipo que fusione el costo competitivo de la línea de baja gama con las prestaciones de los equipos de media gama y asi terminar de modernizar toda la familia de indicadores de peso de la empresa. De dicho estudió  también se desprendió la necesidad de dotar a los nuevos dispositivos con funcionalidades de conexión Wi-Fi y funcionalidades IoT de crecientes demanda en el mercado.\\
+Habiendo lanzado al mercado los equipos NEO y ONIX y se realizó un estudio de mercado con el cual la empresa ha concluido que el mercado de indicadores de baja gama o de entrada de gama (NEO) es un mercado poco competitivo y saturado por equipos de bajo costo principalmente provenientes de China. También se concluyó  que estos equipos son poco requeridos en el mercado de pesaje industrial, el cual es el principal nicho de mercado de interés de la empresa. En este contexto la empresa plantea la necesidad de diseñar un nuevo equipo que fusione el costo competitivo de la línea de baja gama con las prestaciones de los equipos de media gama y así terminar de modernizar toda la familia de indicadores de peso de la empresa. De dicho estudio  también se desprendió la necesidad de dotar a los nuevos dispositivos con funcionalidades de conexión Wi-Fi y funcionalidades IoT de crecientes demanda en el mercado.\\
 
 Los indicadores de peso son instrumentos de medición que conectados a un receptor de carga conforman una balanza o instrumento de pesaje. Los receptores de carga normalmente se basan en celdas de carga las cuales son piezas metálicas con Galgas extensiométricas pegadas a ellas y que al sufrir una deformación mecánica por una fuerza aplicada varían la resistencia eléctrica de manera aproximadamente lineal a la fuerza aplicada. Todas las celdas de carga comerciales tienen aproximadamente el mismo rango de tensión de alimentación, similares impedancias de las galgas y por ende similares rangos señal de salida independientemente de su capacidad de peso (máxima fuerza aplicada admitida), lo que permite que un mismo indicador de peso debidamente diseñado pueda ser conectado diversas configuraciones de receptores de carga con diversas capacidades de peso máximo y distintas apreciaciones. De esta manera, el mismo equipo electrónico puede ser utilizado en diversas aplicaciones de pesaje industriales y/o comerciales según a qué tipo de receptor de carla sea conectado.
 
@@ -338,14 +338,14 @@ Para el desarrollo del presente proyecto se supone que:
 \begin{enumerate}
 \item Costo
 	\begin{enumerate}
-	\item El producto (placa electrónica con display) tiene un costo objetivo de U\$S 35 \color{red} costo tentativo que debe ser confirmado por la empresa antes del mes de diciembre 2020.
+	\item El producto (placa electrónica con display) deberá tener un costo menor o igual a U\$S 35 \color{red} costo tentativo que debe ser confirmado por la empresa antes del mes de diciembre 2020.
 	\end{enumerate}
 \item Interfaz de usuario y conectividad
 	\begin{enumerate}
 	\item Teclado con 5 teclas multifunción cuyas funciones son Encendido/Apagado, puesta a cero, toma de tara, imprimir ticket, ingreso a menú, navegación.
-	\item Display LCD con 6 dígitos, indicador de nivel de batería, indicadores metrológicos (centro de cero, movimiento y tara tomada) e indicador unidad. Se deberá reutilizar el display utilizado actualmente en el equipo NEO.
-	\item Un puerto serie con interfaz RS232/RS485 seleccionable via jumpers, Baudrate configurable, lineas de handshake. El puerto serie podrá funcionar en las modalidades de transmisión continua del peso en formato ASCII con formato configurable, protocolo ModBus RTU esclavo, impresión de ticket para conexión a impresora de 32 lineas con formato configurable. 
-	\item Conexión Wi-Fi con antena interna o externa según sea para gabinetes metálicos o plásticos. El módulo Wi-Fi podrá funcionar en modo "access point" que permitirá conectarse desde otro dispositivo para configurar parámetros de acceso a la red Wi-Fi y en modo cliente para el resto de las funciones.
+	\item Display LCD con 6 dígitos, indicador de nivel de batería, indicadores metrológicos (centro de cero, movimiento y tara tomada) e indicador de unidad de peso. Se deberá reutilizar el display utilizado actualmente en el equipo NEO.
+	\item Un puerto serie con interfaz RS232/RS485 seleccionable via jumpers, Baudrate configurable y lineas de handshake opcionales. El puerto serie podrá funcionar en las modalidades de transmisión continua del peso en formato ASCII con formato configurable, protocolo ModBus RTU esclavo, impresión de ticket para conexión a impresora de 32 lineas con formato configurable. 
+	\item Conexión Wi-Fi con antena interna o externa según sea para gabinetes metálicos o plásticos. El módulo Wi-Fi podrá funcionar en modo access point que permitirá conectarse desde otro dispositivo para configurar parámetros de acceso a la red Wi-Fi y en modo cliente para el resto de las funciones.
 	\item Manejo vía bus I2C de placa auxiliar de entradas/salidas de potencia.
 	\end{enumerate}
 \item Fuente de energía
@@ -359,13 +359,13 @@ Para el desarrollo del presente proyecto se supone que:
 	\begin{enumerate}
 	\item El equipo debe ser de clase III pudiendo manejar hasta 10.000 (diez mil) divisiones de display.
 	\item El acceso al menú de ajuste metrológicos debe estar protegido con un jumper interno que requiera la rotura de un precinto legal para ser accedido. 
-	\item El menú de ajustes metrologicos debe permitir seleccionar la capacidad máxima del indicador, el incremento y el la cantidad de posiciones decimales. Si la elección de capacidad e incremento es tal que se superen las 10.000 divisiones el equipo debe dar señal de error.
+	\item El menú de ajustes metrológicos debe permitir seleccionar la capacidad máxima del indicador, el incremento y el la cantidad de posiciones decimales. Si la elección de capacidad e incremento es tal que se superen las 10.000 divisiones el equipo debe dar señal de error.
 	\item Este menú también debe permitir realizar las acciones de toma de cero de calibración y ajuste con peso patrón en hasta 3 puntos.
 	\end{enumerate}
 \item Almacenamiento de información
 	\begin{enumerate}
 	\item El equipo debe contar con una memoria no volátil para almacenar los parámetros de ajustes metrológicos, parámetros de configuración y totalizadores. 
-	\item Todos los datos almacenados en dicha memoria deben estar protegidos con un CRC que garantice su integridad al ser recuperados.
+	\item Todos los datos almacenados en dicha memoria deben estar protegidos con un CRC que garantice su integridad al ser recuperados. Si los valores de ajuste metrológicos se vieran comprometidos el equipo debe dar señal de error impidiendo su uso normal.
 	\item Es de preferencia el uso de memorias de tecnología ferromagnética por sus casi infinitos ciclos de escritura. 
 	\end{enumerate}	
 \item Celdas de carga
@@ -385,12 +385,21 @@ Para el desarrollo del presente proyecto se supone que:
 	\end{enumerate}				
 \end{enumerate}
 
-%\section{Historias de usuarios (\textit{Product backlog})}
-%\label{sec:backlog}
+\section{Historias de usuarios (\textit{Product backlog})}
+\label{sec:backlog}
 %
 %\begin{consigna}{red}
 %Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
 %\end{consigna}
+\begin{itemize}
+\item Poder seleccionar diversos formatos de impresión de ticket o cargar un formato personalizado. 4 puntos.
+\item Poder imprimir un ticket que muestre los valores actuales de ajuste metrológico y configuración. 2 puntos.
+\item Poder imprimir un ticket que muestre el valor de los totalizadores del equipo. 1 punto.
+\item Poder visualizar un dígito extra (a la derecha) durante la realización de ensayos metrológicos. 4 puntos.
+\item Poder realizar el ajuste de cero y el ajuste de span en indistinto orden. 8 puntos.
+\item Poder configurar los parámetros de la red Wi-Fi desde un dispositivo externo. 16 puntos.
+
+\end{itemize}
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
@@ -454,7 +463,7 @@ Para el desarrollo del presente proyecto se supone que:
 	\end{enumerate}	
 \item Primer prototipo
 	\begin{enumerate}
-	\item Adaptación código fuente kit a prototipo (32 hs)
+	\item Adaptación código fuente implementado en el kit para funcionar en el primer prototipo (32 hs)
 	\item Pruebas firmware en prototipo (8 hs)
 	\end{enumerate}	
 \item Transferencia tecnológica
