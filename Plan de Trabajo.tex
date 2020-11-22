@@ -338,7 +338,7 @@ Para el desarrollo del presente proyecto se supone que:
 \begin{enumerate}
 \item Costo
 	\begin{enumerate}
-	\item El producto (placa electrónica con display) deberá tener un costo menor o igual a U\$S 35 \color{red} costo tentativo que debe ser confirmado por la empresa antes del mes de diciembre 2020.
+	\item El producto (placa electrónica con display) deberá tener un costo menor o igual a U\$S 30. %\color{red} costo tentativo que debe ser confirmado por la empresa antes del mes de diciembre 2020.
 	\end{enumerate}
 \item Interfaz de usuario y conectividad
 	\begin{enumerate}
@@ -456,11 +456,7 @@ Para el desarrollo del presente proyecto se supone que:
 	\item Diseño de esquemático(s) (32 hs)
 	\item Documentación información adicional para diseño PCB(8 hs)
 	\end{enumerate}	
-\item Diseño electrónico
-	\begin{enumerate}
-	\item Diseño de esquemático(s) (32 hs)
-	\item Documentación información adicional para diseño PCB(8 hs)
-	\end{enumerate}	
+
 \item Primer prototipo
 	\begin{enumerate}
 	\item Adaptación código fuente implementado en el kit para funcionar en el primer prototipo (32 hs)
@@ -481,75 +477,36 @@ Cantidad total de horas: (608 hs)
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
-
-%La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
-
-%\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
-
-\end{consigna}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\rotatebox[origin=c]{90}{\includegraphics[width=1.15\textwidth]{./Figuras/AON.png}}
 \caption{Diagrama en \textit{Activity on Node}}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
 
-
-
+\newpage
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.
-
-Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre las cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de gantt de ejemplo}
-\label{fig:gantt}
+La Figura \ref{fig:DiagGantt} muestra el diagrama de Gantt del proyecto con la planificación inicial de ejecución de las tareas. Para esta planificación se considero la siguiente carga horaria disponible para dedicar al proyecto:
+\begin{enumerate}
+	\item Lunes a viernes: 2 horas diarias. 
+	\item Sábados: 5 horas.
+	\item Domingos: No laborables.
+\end{enumerate}	
+La columna \textit{work} de la figura indica la cantidad de días que conlleva cada tarea considerando la carga horaria detallada previamente y el porcentaje de dicha carga dedicada a cada tarea. Los números entre corchetes indican el porcentaje de tiempo dedicado a cada tarea que para las tareas ejecutadas en paralelo es menor a 100.
+\begin{figure}[htpb]
+\centering 
+\rotatebox[origin=c]{0}{\includegraphics[width=1\textwidth]{./Figuras/gant_proyecto.pdf}}
+\caption{Diagrama de gantt}
+\label{fig:DiagGantt}
 \end{figure}
-
-\end{consigna}
 
 \section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
+
 
 
 \begin{table}
@@ -558,35 +515,46 @@ En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realiza
 \begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|c|@{}}
 \hline
 \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & Material 1 & Material 2 & Material 3 & Material 4 \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
+\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC & Kit desarrollo 2 & Enrrutador Fi-Fi & Prototipo \\ \hline
+1 & Análisis requerimientos					          & 16 &  &  &  \\ \hline
+2 & Planificación tareas   					          &  8 &  &  &  \\ \hline
+3 & Documentar la planificación				          &  8 &  &  &  \\ \hline
+4 & Selección de microprocesador				          &  8 &  &  &  \\ \hline
+ 5 & Análisis de herramientas de desarrollo disponibles & 24 &  &  &  \\ \hline
+ 6 & Selección modulo comunicación Wi-Fi		          & 24 &  &  &  \\ \hline
+ 7 & Selección kit(s) de desarrollo                     &  8 &  &  &  \\ \hline
+ 8 & Instalación entorno(s) de desarrollo               & 24 &  &  &  \\ \hline 
+ 9 & Pruebas de compilación ejemplos y debbuging        &  8 & 8 &  &  \\ \hline
+ 10 & Planteo estructura tareas RTOS                    & 32 &  &  &  \\ \hline
+ 11 & Codificación rutinas lectura ADC                  & 32 & 32 &  &  \\ \hline
+ 12 & Codificación rutinas metrológicas                 & 32 & 32 &  &  \\ \hline
+ 13 & Codificación rutinas manejo puerto serie          & 16 & 16 &  &  \\ \hline
+ 14 & Codificación rutinas impresión y transmisión continua          & 16 & 16 &  &  \\ \hline
+
+\end{tabularx}%
+\end{table}
+
+\begin{table}
+\label{tab:recursos}
+\centering
+\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|c|@{}}
+\hline
+\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
+\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC & Kit desarrollo & Enrutador Wi-Fi & Prototipo \\ \hline
+ 15 & Codificación rutinas modbus RTU                                & 24 & 16 &  &  \\ \hline
+ 16 & Codificación rutinas atención de display y teclado             & 24 & 16 &  &  \\ \hline
+ 17 & Codificación rutinas manejo módulo Wi-Fi modo access point     & 40 & 40 & 40 &  \\ \hline
+ 18 & Codificación rutinas manejo módulo Wi-Fi transmisión de datos  & 40 & 40 & 40 &  \\ \hline
+ 19 & Codificación rutinas menús de usuario                          & 40 & 40 &  &  \\ \hline
+ 20 & Codificación rutinas función peso                              & 16 & 16 &  &  \\ \hline
+ 21 & Codificación rutinas función contador de piezas                &  8 & 16 &  &  \\ \hline
+ 22 & Codificación rutinas función envasado y manejo placa de potencia & 24 & 24 &  &  \\ \hline
+ 23 & Diseño de esquemático                                          & 32 &  &  &  \\ \hline
+ 24 & Documentación información adicional para diseño PCB            &  8 &  &  &  \\ \hline 
+ 25 & Adaptación código fuente                                       & 32 &  &  & 32 \\ \hline
+ 26 & Pruebas firmware en prototipo                                  &  8 &  & 8 & 8 \\ \hline
+ 27 &  Redacción transferencia                                       &  40 &  &  &\\ \hline
+
 
 \end{tabularx}%
 \end{table}
@@ -595,16 +563,16 @@ En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realiza
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-\end{consigna}
+%\begin{consigna}{red}
+%Si el proyecto es complejo entonces separarlo en partes:
+%\begin{itemize}
+%\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
+%\item El desglose detallado del subtotal de cada una de las áreas.
+%\end{itemize}
+%
+%IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
+%
+%\end{consigna}
 
 \begin{table}[htpb]
 \centering
@@ -617,24 +585,29 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
+PC & 
+  \multicolumn{1}{c|}{1}  &
+  \multicolumn{1}{c|}{120000}  &
+  \multicolumn{1}{c|}{120000} \\ \hline
+Enrrutador Wi-Fi &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{4000} &
+  \multicolumn{1}{c|}{4000} \\ \hline
+Kit desarrollo &
+  \multicolumn{1}{c|}{1} &
+  \multicolumn{1}{c|}{8000} &
+  \multicolumn{1}{c|}{8000} \\ \hline
+Horas hombre Ingeniería &
+  \multicolumn{1}{c|}{604} &
+  \multicolumn{1}{c|}{1000} &
+  \multicolumn{1}{c|}{604000} \\ \hline
+      
 \multicolumn{1}{|l|}{} &
    &
    &
    \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+\multicolumn{3}{|c|}{SUBTOTAL}  &
+  \multicolumn{1}{c|}{736000} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -642,31 +615,28 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+Servicio de internet & 
+  \multicolumn{1}{c|}{12}  &
+  \multicolumn{1}{c|}{2000}  &
+  \multicolumn{1}{c|}{24000} \\ \hline  
 \multicolumn{1}{|l|}{} &
    &
    &
    \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{24000} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
+   760000 \\ \hline
 \end{tabularx}%
 \end{table}
 
 
 \section{11. Matriz de asignación de responsabilidades}
 \label{sec:responsabilidades}
-\begin{consigna}{red}
-Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
+
+%\begin{consigna}{red}
+%Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
 
 \begin{table}[htpb]
 \centering
@@ -691,9 +661,35 @@ Establecer la matriz de asignación de responsabilidades y el manejo de la autor
   \supname &
   Nombre de alguien &
   \clientename \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
+  
+1 & Análisis requerimientos					         & P &  &  &  \\ \hline
+2 & Planificación tareas   					         & P &  &  &  \\ \hline
+3 & Documentar la planificación				         & P & A-C&  & A \\ \hline
+4 & Selección de microprocesador				         & P & A&  &  \\ \hline
+5 & Análisis de herramientas de desarrollo disponibles & P & A&  &  \\ \hline 
+6 & Selección modulo comunicación Wi-Fi		         & P & A&  &  \\ \hline
+7 & Selección kit(s) de desarrollo                     & P &  &  &  \\ \hline
+8 & Instalación entorno(s) de desarrollo               & P &  &  &  \\ \hline 
+9 & Pruebas de compilación ejemplos y debbuging        & P &  &  &  \\ \hline
+10 & Planteo estructura tareas RTOS                    & P &  &  &  \\ \hline
+11 & Codificación rutinas lectura ADC                  & P & C&  &  \\ \hline
+12 & Codificación rutinas metrológicas                 & P & C&  &  \\ \hline
+13 & Codificación rutinas manejo puerto serie          & P &  &  &  \\ \hline
+14 & Codificación rutinas impresión y transmisión continua          & P &  &  &  \\
+15 & Codificación rutinas modbus RTU                                & P & C&  &  \\ \hline
+16 & Codificación rutinas atención de display y teclado             & P &  &  &  \\ \hline
+17 & Codificación rutinas manejo módulo Wi-Fi modo access point     & P &  &  &  \\ \hline
+18 & Codificación rutinas manejo módulo Wi-Fi transmisión de datos  & P &  &  &  \\ \hline
+19 & Codificación rutinas menús de usuario                          & P & C&  &  \\ \hline
+20 & Codificación rutinas función peso                              & P & C&  &  \\ \hline
+21 & Codificación rutinas función contador de piezas                & P & C&  &  \\ \hline
+22 & Codificación rutinas función envasado y manejo placa de potencia & P & C &  &  \\ \hline
+23 & Diseño de esquemático                                          & P & A-C &  &  \\ \hline
+24 & Documentación información adicional para diseño PCB            & P & A &  &  \\ \hline 
+25 & Adaptación código fuente                                       & P &  &  &  \\ \hline
+26 & Pruebas firmware en prototipo                                  & P & A &  & A \\ \hline
+27 & Redacción transferencia                                        & P & A &  & A \\ \hline 
+
 \end{tabular}%
 }
 \end{table}
@@ -709,12 +705,12 @@ Referencias:
 \end{itemize}
 } %footnotesize
 
-Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
-A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
-
-Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
-
-\end{consigna}
+%Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
+%A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
+%
+%Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
+%
+%\end{consigna}
 
 \section{12. Gestión de riesgos}
 \label{sec:riesgos}
