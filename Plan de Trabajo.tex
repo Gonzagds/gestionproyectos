@@ -64,7 +64,10 @@
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento                                          & 23/10/2020 \\ \hline
 1.1      & Se agregan historias de usuario y se corrigen observaciones a la primer entrega                                 & 13/11/2020 \\ \hline
-%1.2      & Otro ejemplo \newline
+1.2      & Se agregan secciones 7 a 11 & 22/11/2020\\ \hline
+1.3      & Se agregan secciones 12 a 17  \newline
+ Se corrigen observaciones realizadas a las versiones 1.1 y 1.2 & xx/12/2020 \\ \hline
+1.4      & Se agregan secciones 12 a 17 & 03/12/2020\\ \hline 
 %		   Con texto partido \newline
 %		   En varias líneas \newline
 %		   A propósito                                                     & dd/mm/aaaa \\ \hline
@@ -84,7 +87,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la selección de la tecnología adecuada, el diseño de los circuitos esquemáticos y la generación del código fuente necesario para el desarrollo de una nueva familia de indicadores y controladores de peso que reemplace a familia de indicadores de gama media que la empresa Sipel S.R.L. fabrica y comercializa actualmente. También se generará la documentación pertinente para realizar una transferencia tecnológica que le permita a la empresa el posterior mantenimiento o modificación del producto final. El código fuente generado será testeado sobre un prototipo cuya construcción estará a cargo de la empresa o en su defecto sobre una plataforma de desarrollo (development kit) acorde a la tecnología seleccionada para el diseño. El proyecto tendrá un presupuesto preliminar estimado de 608 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la selección de la tecnología adecuada, el diseño de los circuitos esquemáticos y la generación del código fuente necesario para el desarrollo de una nueva familia de indicadores y controladores de peso que reemplace a familia de indicadores de gama media que la empresa Sipel S.R.L. fabrica y comercializa actualmente. También se generará la documentación pertinente para realizar una transferencia tecnológica que le permita a la empresa el posterior mantenimiento o modificación del producto final. El código fuente generado será testeado sobre un prototipo cuya construcción estará a cargo de la empresa o en su defecto sobre una plataforma de desarrollo (development kit) acorde a la tecnología seleccionada para el diseño. El proyecto tendrá un presupuesto preliminar estimado de 670 hs de trabajo y \textcolor{red}{\$826.000}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -392,12 +395,12 @@ Para el desarrollo del presente proyecto se supone que:
 %Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
 %\end{consigna}
 \begin{itemize}
-\item Poder seleccionar diversos formatos de impresión de ticket o cargar un formato personalizado. 4 puntos.
-\item Poder imprimir un ticket que muestre los valores actuales de ajuste metrológico y configuración. 2 puntos.
-\item Poder imprimir un ticket que muestre el valor de los totalizadores del equipo. 1 punto.
-\item Poder visualizar un dígito extra (a la derecha) durante la realización de ensayos metrológicos. 4 puntos.
-\item Poder realizar el ajuste de cero y el ajuste de span en indistinto orden. 8 puntos.
-\item Poder configurar los parámetros de la red Wi-Fi desde un dispositivo externo. 16 puntos.
+\item Como usuario deseo poder seleccionar entre diversos formatos de impresión del ticket o cargar un formato personalizado. 4 puntos.
+\item Como usuario o como técnico deseo poder imprimir un ticket que muestre los valores actuales de ajuste metrológico y configuración para visualizar valores que pueden estar en menús protegidos. 2 puntos.
+\item Como usuario deseo poder imprimir un ticket que muestre el valor de los totalizadores del equipo para auditar periódicamente la cantidad de material pesado y que cantidad de pesadas se realizaron. 1 punto.
+\item Como técnico o como auditor deseo poder visualizar un dígito extra (a la derecha) durante la realización de ensayos metrológicos para validar ensayos de movilidad, excentricidad, etc. 4 puntos.
+\item Como técnico deseo poder realizar el ajuste de cero y el ajuste de span en indistinto orden para facilitar los procesos de ajuste, especialmente aquellos con peso patrones de gran magnitud que requieran grúas u otras maquinas para su manipulación. 8 puntos.
+\item Como usuario deseo poder configurar los parámetros de la red Wi-Fi desde un dispositivo externo para que una vez configurado el equipo comience a utilizar los recursos de la red Wi-Fi. 16 puntos.
 
 \end{itemize}
 
@@ -460,15 +463,21 @@ Para el desarrollo del presente proyecto se supone que:
 \item Primer prototipo
 	\begin{enumerate}
 	\item Adaptación código fuente implementado en el kit para funcionar en el primer prototipo (32 hs)
+	\item Puesta en marcha del prototipo. Verificación de tensiones de alimentación. (4 hs)
 	\item Pruebas firmware en prototipo (8 hs)
 	\end{enumerate}	
 \item Transferencia tecnológica
 	\begin{enumerate}
 	\item Redacción transferencia (40 hs)
+	\end{enumerate}		
+\item Cierre del proyecto
+	\begin{enumerate}
+	\item Elaboración del informe final (64 hs)
+	\item Elaboración de la presentación (24 hs)
 	\end{enumerate}					
 \end{enumerate}
 
-Cantidad total de horas: (608 hs)
+Cantidad total de horas: (670 hs)
 
 %Se recomienda que no haya ninguna tarea que lleve más de 40 hs. 
 
@@ -507,15 +516,13 @@ La columna \textit{work} de la figura indica la cantidad de días que conlleva c
 \section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
 
-
-
-\begin{table}
+\begin{table}[hbt!]
 \label{tab:recursos}
 \centering
 \begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|c|@{}}
 \hline
 \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC & Kit desarrollo 2 & Enrrutador Fi-Fi & Prototipo \\ \hline
+\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC & Kit desarrollo & Enrrutador Fi-Fi & Prototipo \\ \hline
 1 & Análisis requerimientos					          & 16 &  &  &  \\ \hline
 2 & Planificación tareas   					          &  8 &  &  &  \\ \hline
 3 & Documentar la planificación				          &  8 &  &  &  \\ \hline
@@ -550,10 +557,12 @@ La columna \textit{work} de la figura indica la cantidad de días que conlleva c
  21 & Codificación rutinas función contador de piezas                &  8 & 16 &  &  \\ \hline
  22 & Codificación rutinas función envasado y manejo placa de potencia & 24 & 24 &  &  \\ \hline
  23 & Diseño de esquemático                                          & 32 &  &  &  \\ \hline
- 24 & Documentación información adicional para diseño PCB            &  8 &  &  &  \\ \hline 
+ 24 & Documentación información para diseño PCB                      &  8 &  &  &  \\ \hline 
  25 & Adaptación código fuente                                       & 32 &  &  & 32 \\ \hline
  26 & Pruebas firmware en prototipo                                  &  8 &  & 8 & 8 \\ \hline
- 27 &  Redacción transferencia                                       &  40 &  &  &\\ \hline
+ 27 & Redacción transferencia                                        &  40 &  &  &\\ \hline
+ 28 & Informe final                                                  &  64 &  &  &\\ \hline
+ 29 & Presentación                                                   &  24 &  &  &\\ \hline
 
 
 \end{tabularx}%
@@ -598,16 +607,16 @@ Kit desarrollo &
   \multicolumn{1}{c|}{8000} &
   \multicolumn{1}{c|}{8000} \\ \hline
 Horas hombre Ingeniería &
-  \multicolumn{1}{c|}{604} &
+  \multicolumn{1}{c|}{670} &
   \multicolumn{1}{c|}{1000} &
-  \multicolumn{1}{c|}{604000} \\ \hline
+  \multicolumn{1}{c|}{670000} \\ \hline
       
 \multicolumn{1}{|l|}{} &
    &
    &
    \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL}  &
-  \multicolumn{1}{c|}{736000} \\ \hline
+  \multicolumn{1}{c|}{802000} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -627,7 +636,7 @@ Servicio de internet &
   \multicolumn{1}{c|}{24000} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
-   760000 \\ \hline
+   826000 \\ \hline
 \end{tabularx}%
 \end{table}
 
@@ -659,16 +668,16 @@ Servicio de internet &
   \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea} &
   \authorname &
   \supname &
-  Nombre de alguien &
+  N/A &
   \clientename \\ \hline
   
-1 & Análisis requerimientos					         & P &  &  &  \\ \hline
-2 & Planificación tareas   					         & P &  &  &  \\ \hline
+1 & Análisis requerimientos					         & P &  &  & A  \\ \hline
+2 & Planificación tareas   					         & P & I&  &  \\ \hline
 3 & Documentar la planificación				         & P & A-C&  & A \\ \hline
 4 & Selección de microprocesador				         & P & A&  &  \\ \hline
 5 & Análisis de herramientas de desarrollo disponibles & P & A&  &  \\ \hline 
 6 & Selección modulo comunicación Wi-Fi		         & P & A&  &  \\ \hline
-7 & Selección kit(s) de desarrollo                     & P &  &  &  \\ \hline
+7 & Selección kit(s) de desarrollo                     & P & I&  &  \\ \hline
 8 & Instalación entorno(s) de desarrollo               & P &  &  &  \\ \hline 
 9 & Pruebas de compilación ejemplos y debbuging        & P &  &  &  \\ \hline
 10 & Planteo estructura tareas RTOS                    & P &  &  &  \\ \hline
@@ -715,87 +724,252 @@ Referencias:
 \section{12. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos)
-\begin{itemize}
-\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de severidad (S).
-\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
+%\begin{consigna}{red}
+%a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
+% 
+%Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos)
+%\begin{itemize}
+%\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
+%Justificar el motivo por el cual se asigna determinado número de severidad (S).
+%\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
+%Justificar el motivo por el cual se asigna determinado número de (O). 
+%\end{itemize}   
+%
+%Riesgo 2:
+%\begin{itemize}
+%\item Severidad (S): 
+%\item Ocurrencia (O):
+%\end{itemize}
+%
+%Riesgo 3:
+%\begin{itemize}
+%\item Severidad (S): 
+%\item Ocurrencia (O):
+%\end{itemize}
 
-Riesgo 2:
-\begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
-\end{itemize}
 
-Riesgo 3:
-\begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
-\end{itemize}
+%b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 
-
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
-
-\begin{table}[htpb]
+\begin{table}[H]% [!htpb]
 \centering
 \begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-\end{tabularx}%
+
+Objeciones realizadas por el organismo regulador a funcionalidades del software que impliquen la no aprobación del expediente del producto. La ley metrológica Argentina es obsoleta y no contempla muchas de las características de los equipos actuales. Esto genera ambigüedades en los requerimientos para la aprobación de un nuevo instrumento quedando su resolución a criterio del organismo regulador. Es habitual que durante el proceso de aprobación estas objeciones impliquen cambios en el firmware.    
+& 3 & 8 & 24 & &  & \\ \hline
+
+Fallas de diseño de circuito que impliquen susceptibilidad al ruido eléctrico o deriva térmica con el consiguiente riesgo de no superar los ensayos metrológicos de aprobación de modelo. La aprobación de un nuevo modelo implica aprobar ensayos de inmunidad electromagnética y ensayos metrológicos (movilidad, excentricidad, repetitividad, etc) realizados en una cámara térmica en todo el rango de temperatura de operación declarado en el expediente. La necesidad de instalaciones especiales y alto de costo de tercerizar estos ensayos los vuelven inviables de ser realizados durante el proceso de diseño.       
+& 9 & 4 & 36 &  9  &  2  & 18     \\ \hline
+
+Obsolescencia de componentes críticos como ser el procesador, el ADC, controlador de display etc. Es común que los fabricantes de semiconductores descontinúen la fabricación de componentes o de ciertos encapsulados de un componente. También es habitual que exista una gran oferta por parte de los distribuidores cuando los componentes están próximos a ser discontinuados incluso en ocasiones a menor precio que el habitual volviéndolos falsamente atractivos durante el proceso de selección.       
+& 9  & 5  & 45 &  9  &  1  & 9     \\ \hline
+
+Demoras en la fabricación de la placa del prototipo con el consiguiente retraso de todas las etapas que dependan de contar con un prototipo físico para ser ejecutadas. Principalmente se retrasará la validación del diseño que debe hacerse sobre el producto final y por ende se podría retrasar la puesta producción. Las demoras en la fabricación de un prototipo habitualmente suelen estar asociadas a que son procesos que se ejecutan por fuera de los procesos estándares de las empresas lo cual lo vuelve mas propenso a imprevistos. Un ejemplo es el tener que comprar componentes que no se encuentran dentro del sistema de stock de la compañía. 
+& 3  & 5  & 15 &    &    &      \\ \hline
+
+Errores al documentar los requerimientos del proyecto que puedan implicar que no se implementen funcionalidades requeridas o que se implementen incorrectamente. Puede ocurrir por mala comunicación entre las partes involucradas o porque alguna de las partes supone que cierto requerimiento se sobreentiende y no es necesario aclararlo y/o documentarlo
+& 8 & 8 & 56 & 4   &  4  &  16    \\ \hline
+       
+\end{tabularx}
 \end{table}
 
 Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 25.
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
-c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
+Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
+Riesgo 1: N/A. Las correcciones a realizar suelen ser pequeñas con bajo costo de rediseño.
+%plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+%  Nueva asignación de S y O, con su respectiva justificación:
+%  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
+%          Justificar el motivo por el cual se asigna determinado número de severidad (S).
+%  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
+%          Justificar el motivo por el cual se asigna determinado número de (O).
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+Riesgo 2: Para las partes del circuito que sean propensas a generar deriva térmica de la lectura se procurará seleccionar componentes de baja dispersión y rango de temperatura de trabajo igual o mayor al rango de temperatura de uso del equipo. También se consultarán las notas de aplicación provistas por el fabricante del ADC para una correcta selección de componentes y especialmente se tomarán como referencia diseños previos de comprobado desempeño.\\ 
+En lo respectivo a la susceptibilidad electromagnética se procurará atenerse a las buenas prácticas de diseños de PCB con mayor atención en el diseño del stack del PCB, el trazado de las pistas de potencia y la ubicación de los componentes radiantes respecto del circuito de medición. Para el stack del PCB se utilizará un modelo de 4 capas con planos internos de GND y Vcc que generen caminos de retornos de las corrientes bien definidos. Para los elementos radiantes (bobinas de fuentes switching o módulo wi-fi) se seguirán cuidadosamente las recomendaciones de los fabricantes de componentes sobre el trazado de pistas y ubicación de los mismos.\\
+Nueva posibilidad de ocurrencia = 2. 
  
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+Riesgo 3: Para los componentes críticos se seleccionarán unicamente aquellos componentes cuyos fabricantes aseguren una longevidad no menor a 6 años y preferentemente aquellos que aseguren 10 o mas años de longevidad.\\
+Nueva posibilidad de ocurrencia = 1. 
 
-\end{consigna}
+Riesgo 4: N/A. Las demoras de este tipo usualmente pueden quedar enmascaradas en variaciones de tiempo de ejecución del proyecto.
+
+Riesgo 5: Se revisarán los requerimientos registrados con todas las partes involucradas (área comercial, gerencia, área ingeniería) confirmando que no se haya omitido algún item. También se realizarán entregas parciales o demostraciones parciales durante el proceso de desarrollo para confirmar que las funcionalidades implementadas cumplan lo pretendido. De esta manera se minimiza la posibilidad de ocurrencia de malas interpretaciones. Por otro lado, de haber diferencias entre lo pretendido y lo implementado estas discrepancias deberían ser menores minimizando la severidad del problema.\\
+Nueva posibilidad de ocurrencia = 4\\
+Nueva severidad = 4
+%\end{consigna}
 
 
 \section{13. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Para cada uno de los requerimientos del proyecto indique:
-\begin{itemize} 
-\item Req \#1: copiar acá el requerimiento.
+%\begin{consigna}{red}
+%Para cada uno de los requerimientos del proyecto indique:
+%\begin{itemize} 
+%\item Req \#1: copiar acá el requerimiento.
+%
+%Verificación y validación:
+%
+%\begin{itemize}
+%\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
+%\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+%\end{itemize}
+%
+%\end{itemize}
+%
+%Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.
+%
+%\begin{itemize}
+%\item Verificación: 
+%\item Validación:
+%\end{itemize}	
+%
+%\end{consigna}
 
-Verificación y validación:
+\begin{enumerate}
+\item Costo
+	\begin{enumerate}
+	\item El producto (placa electrónica con display) deberá tener un costo menor o igual a U\$S 30. %
+	\end{enumerate}
+	
+\begin{itemize}
+\item Verificación: Cotización de todos los componentes y procesos de producción.
+\item Validación:El costo de producción del prototipo puede servir de validación. En caso de que el costo resultante dependa sensiblemente de las cantidades producidas se validará con la producción de la primer tanda.
+\end{itemize}
+	
+\item Interfaz de usuario y conectividad
+	\begin{enumerate}
+	\item Teclado con 5 teclas multifunción cuyas funciones son Encendido/Apagado, puesta a cero, toma de tara, imprimir ticket, ingreso a menú, navegación.
+	
+\begin{itemize}
+\item Verificación:corroborando que el código fuente implementa las funciones indicadas para cada tecla.
+\item Validación: con demostraciones de funcionamiento en entregas parciales del código.
+\end{itemize}
+	
+	\item Display LCD con 6 dígitos, indicador de nivel de batería, indicadores metrológicos (centro de cero, movimiento y tara tomada) e indicador de unidad de peso. Se deberá reutilizar el display utilizado actualmente en el equipo NEO.
 
 \begin{itemize}
-\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
-\end{itemize}
+\item Verificación: corroborando que el código fuente maneja todos los indicadores del display según  lo requerido.
+\item Validación: con demostraciones de funcionamiento en entregas parciales del código.
+\end{itemize}	
+	
+	\item Un puerto serie con interfaz RS232/RS485 seleccionable via jumpers, Baudrate configurable y lineas de handshake opcionales. El puerto serie podrá funcionar en las modalidades de transmisión continua del peso en formato ASCII con formato configurable, protocolo ModBus RTU esclavo, impresión de ticket para conexión a impresora de 32 lineas con formato configurable. 
+	
+\begin{itemize}
+\item Verificación: Simulaciones de uso trasmitiendo datos a un programas tipo terminal e intercambiando datos con programas de simulación de Modbus (ejemplo Modscan).
+\item Validación: demostraciones de uso conectando el equipo a impresoras térmicas, dispositivos modbus y capturando el envío continuo de datos con alguno de los software de la compañía.
+\end{itemize}		
+	
+	\item Conexión Wi-Fi con antena interna o externa según sea para gabinetes metálicos o plásticos. El módulo Wi-Fi podrá funcionar en modo access point que permitirá conectarse desde otro dispositivo para configurar parámetros de acceso a la red Wi-Fi y en modo cliente para el resto de las funciones.
+	
+\begin{itemize}
+\item Verificación: conectado la PC al access point y abriendo la comunicación con un software terminal. En modo cliente abriendo la comunicación desde un programa terminal al IP asignado dentro de la red.
+\item Validación: Se pueden hacer demostraciones con los mismos métodos utilizados en la verificación.
+\end{itemize}		
+	
+	\item Manejo vía bus I2C de placa auxiliar de entradas/salidas de potencia.
+	\end{enumerate}
+	
+\begin{itemize}
+\item Verificación: con funciones de debug que permitan leer y escribir los puertos de la placa de potencia. Las placas de potencia poseen LEDs que evidencian el estado de sus puertos no precisando otro hardware externo para estas pruebas. El cliente proveerá una placa de potencia para utilizar durante el desarrollo.
+\item Validación: Se validará junto con la demostración de los modos de automatismo detallados mas adelante.
+\end{itemize}		
+	
+\item Fuente de energía
+	\begin{enumerate}
+	\item El equipo se alimentará desde una fuente externa de 12Vcc.
+	
+\begin{itemize}
+\item Verificación: mediante la revisión del diseño de las etapas de las fuentes de alimentación
+\item Validación: Alimentando el prototipo con la fuente externa prevista para ser utilizada con el equipo.
+\end{itemize}		
+	
+	\item Opcionalmente el equipo podrá contar con una batería interna con capacidad para uso continuo de 8 horas.
+	\item Durante el diseño del circuito esquemático se hará una evaluación de costos para definir si el circuito de control de carga de la batería se implementa dentro de la placa principal del equipo base o como una placa satélite opcional.
+		\item No se implementará en el código fuente las funcionalidades de modo batería (nivel de batería, apagado automático de display, etc) debiendo implementarse en futuras revisiones a cargo de la empresa. 
+	
+\begin{itemize}
+\item Verificación: verificando los costos con cotizaciones parciales durante el desarrollo y revisando los cálculos de consumo y diseño de la etapa de carga de batería.
+\item Validación: Con ensayos de autonomía de uso del prototipo alimentado con la batería.
+\end{itemize}	
+	\end{enumerate}
 
-\end{itemize}
-
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.
-
-\end{consigna}
+\item Ajustes metrológicos
+	\begin{enumerate}
+	\item El equipo debe ser de clase III pudiendo manejar hasta 10.000 (diez mil) divisiones de display.
+	
+\begin{itemize}
+\item Verificación: con funciones de debug que simulen la lectura de peso.
+\item Validación: mediante demostraciones de entregas parciales y durante los ensayos metrológico realizados al prototipo ya sea con un simulador de carga o conectado a un receptor de carga y peso patrones.
+\end{itemize}		
+	
+	\item El acceso al menú de ajuste metrológicos debe estar protegido con un jumper interno que requiera la rotura de un precinto legal para ser accedido.
+	
+\begin{itemize}
+\item Verificación: simulando el ingreso al menú con y sin el jumper colocado.
+\item Validación: mediante demostraciones de entregas parciales y durante procesos de ajuste realizados sobre el prototipo previo a la realización de ensayos metrológicos.
+\end{itemize}			
+	 
+	\item El menú de ajustes metrológicos debe permitir seleccionar la capacidad máxima del indicador, el incremento y el la cantidad de posiciones decimales. Si la elección de capacidad e incremento es tal que se superen las 10.000 divisiones el equipo debe dar señal de error.
+	
+\begin{itemize}
+\item Verificación: simulando el ajuste del equipo con diversas combinaciones de capacidad e incremento.
+\item Validación: mediante demostraciones de entregas parciales y durante procesos de ajuste realizados sobre el prototipo previo a la realización de ensayos metrológicos.
+\end{itemize}		
+	
+	\item Este menú también debe permitir realizar las acciones de toma de cero de calibración y ajuste con peso patrón en hasta 3 puntos.
+	
+\begin{itemize}
+\item Verificación: con funciones de debug que simulen la lectura de peso y simulando el ajuste del equipo con 1, 2 y tres puntos de peso patrón.
+\item Validación: mediante demostraciones de entregas parciales y durante el proceso de ajuste realizados sobre el prototipo previo a la realización de ensayos metrológicos.
+\end{itemize}		
+	
+	\end{enumerate}
+\item Almacenamiento de información
+	\begin{enumerate}
+	\item El equipo debe contar con una memoria no volátil para almacenar los parámetros de ajustes metrológicos, parámetros de configuración y totalizadores. 
+	\item Todos los datos almacenados en dicha memoria deben estar protegidos con un CRC que garantice su integridad al ser recuperados. Si los valores de ajuste metrológicos se vieran comprometidos el equipo debe dar señal de error impidiendo su uso normal.
+	\item Es de preferencia el uso de memorias de tecnología ferromagnética por sus casi infinitos ciclos de escritura. 
+	
+\begin{itemize}
+\item Verificación: mediante funciones de debug que permitan recuperar los datos almacenados en la memoria y que permitan simular errores de CRC.
+\item Validación: mediante demostraciones de entregas parciales  donde apagando y encendiendo el prototipo se corrobore que los parámetros de ajuste y configuración se mantuvieron inalterados. También imprimiendo tiques con el resumen de los totalizadores y verificando que coincidan con las capturas de peso que se hayan hecho durante las demostraciones.
+\end{itemize}		
+	\end{enumerate}	
+	
+\item Celdas de carga
+	\begin{enumerate}
+	\item El equipo debe admitir celdas de carga con relaciones excitación/señal de 1 mV/V, 2 mV/V y 3 mV/V.
+	\item Debe contar con una fuente de tensión regulada de 5V con baja deriva térmica exclusiva para la excitación de las celdas de carga.
+	\item Debe poder excitar hasta 12 celdas conectadas en paralelo de 750ohms cada una sin variaciones en su tensión de salida. 
+	\item Debe contar con una segunda salida de excitación regulada con un preset que permita la conexión y ecualización de dos celdas de carga. Para mas de dos celdas la ecualización se debe realizar mediante una caja de unión externa.
+	\item Para la lectura de la señal de salida de las celdas se deberá utilizar el ADC \textit{ADS1232} ya utilizado en otros diseños de la compañía por sus ya comprobadas prestaciones.
+	
+\begin{itemize}
+\item Verificación: Todos los requisitos para la conexión y uso de celdas de carga se verificarán mediante la revisión del diseño electrónico y los cálculos de componentes respectivos. 
+\item Validación: La conexión y uso de las celdas de carga se validará ensayando el prototipo conectado a diversos receptores de carga cada uno con distintos tipos y cantidades de celdas o en su defecto con simuladores de carga.
+\end{itemize}		
+	
+	\end{enumerate}	
+\item El equipo debe implementar las siguientes funciones:
+	\begin{enumerate}
+	\item Peso (función por defecto).
+	\item Contador de piezas.
+	\item Envasado con doble corte (requiere placa auxiliar de potencia).
+	\item El código fuente se debe estructurar de manera tal que permita en un futuro agregar funciones de forma estructurada y sencilla.
+	
+\begin{itemize}
+\item Verificación: los modos funciones se verificarán simulando el uso de cada una de ellas y de cada una de las funcionalidades asociadas. En el caso que alguna función o funcionalidad requiera el uso de alguna pieza de hardware de la cual no se disponga se hará uso de funciones de debug que simulen dicho hardware.
+\item Validación: Todas las funciones se validarán haciendo ensayos de uso del prototipo realizados por personal de ingeniería involucrado en el proyecto y por personal técnico de la empresa ajeno al proyecto.
+\end{itemize}		
+	
+	\end{enumerate}				
+\end{enumerate}
 
 \section{14. Comunicación del proyecto}
 \label{sec:comunicaciones}
@@ -810,32 +984,83 @@ El plan de comunicación del proyecto es el siguiente:
 \multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}PLAN DE COMUNICACIÓN DEL PROYECTO}           \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 ¿Qué comunicar? & Audiencia & Propósito & Frecuencia & Método de comunicac. & Responsable \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
+
+Avances en la selección de componentes o en el diseño del circuito esquemático & 
+Jefe de ingeniería  &  
+validar requisitos de hardware y/o consensuar cambios en los mismos de ser necesario  &  
+cada 15 días   & 
+video llamada  &     
+Sanchez Gonzalo        \\ \hline
+
+Finalización del circuito esquemático  & 
+Equipo de electrónica del depto de ingeniería &
+Hacer un cierre de la etapa y fijar pautas para el diseño del PCB y fabricación de la placa prototipo   por parte de la empresa&
+Por única vez  &
+video llamada & 
+Sanchez Gonzalo            \\ \hline
+
+Avances en el desarrollo del código fuente & 
+Jefe de ingeniería  &  
+Realizar demostraciones y validaciones parciales de los requisitos de software y/o consensuar cambios en los mismos de ser necesario  &  
+cada 15 días   & 
+video llamada  &     
+Sanchez Gonzalo        \\ \hline
+
+Finalización del firmware  & 
+Equipo de electrónica del depto de ingeniería &
+Hacer un cierre de la etapa y fijar pautas para la realización de ensayos con la versión final del firmware sobre la placa prototipo&
+Por única vez  &
+video llamada & 
+Sanchez Gonzalo   \\ \hline
+
 \end{tabularx}
 \end{table}
+
+
+\begin{table}[htpb]
+\centering
+\begin{tabularx}{\linewidth}{@{}|X|C{2.4cm}|C{3cm}|C{1.8cm}|C{2cm}|C{2.1cm}|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}PLAN DE COMUNICACIÓN DEL PROYECTO (continuación)}           \\ \hline
+\rowcolor[HTML]{C0C0C0} 
+¿Qué comunicar? & Audiencia & Propósito & Frecuencia & Método de comunicac. & Responsable \\ \hline
+
+Entrega de transferencia tecnológica  &
+Departamento de ingeniería y gerencia   &
+Presentación del prototipo, demostraciones y cierre formal del proyecto  &
+Por única vez  &
+A consensuar. Podrá presencial o semi presencial dependiendo de las condiciones sanitarias públicas al momento del cierre del proyecto   & 
+Sanchez Gonzalo            \\ \hline
+\end{tabularx}
+\end{table}
+
+
 
 \section{15. Gestión de compras}
 \label{sec:compras}
 
-\begin{consigna}{red}
-En caso de tener que comprar elementos o contratar servicios:
-a) Explique con qué criterios elegiría a un proveedor.
-b) Redacte el Statement of Work correspondiente.
-\end{consigna}
+Dpto. compras Sipel S.R.L., \\
+Se solicita la adquisición de un kit de desarrollo marca Spressif modelo ESP-WROVER-KIT-VE. Realizar la adquisición 	mediante compra en linea en los distribuidores www.mouser.com o www.digikey.com.	Realizar la importación mediante servicio de currier cuyo tiempo promedio de entrega es de 15 dias corridos. No se debe consolidar la compra del kit con otros productos para evitar demoras en la gestión de compras, envío o en el ingreso aduanero.
+En el distribuidor Mouser el producto está codificado como 356-ESPWROVER-KIT-VB. En el distribuidor Digikey el producto está codificado como 1904-1013-ND.
+
+Saludos atte.,\\
+Ing. Sanchez Gonzalo.
+%\begin{consigna}{red}
+%En caso de tener que comprar elementos o contratar servicios:
+%a) Explique con qué criterios elegiría a un proveedor.
+%b) Redacte el Statement of Work correspondiente.
+%\end{consigna}
 
 \section{16. Seguimiento y control}
 \label{sec:seguimiento}
 
-\begin{consigna}{red}
-Para cada tarea del proyecto establecer la frecuencia y los indicadores con los se seguirá su avance y quién será el responsable de hacer dicho seguimiento y a quién debe comunicarse la situación (en concordancia con el Plan de Comunicación del proyecto).
-
-El indicador de avance tiene que ser algo medible, mejor incluso si se puede medir en \% de avance. Por ejemplo,se pueden indicar en esta columna cosas como ``cantidad de conexiones ruteadeas'' o ``cantidad de funciones implementadas'', pero no algo genérico y ambiguo como ``\%'', porque el lector no sabe porcentaje de qué cosa.
-
-\end{consigna}
+%\begin{consigna}{red}
+%Para cada tarea del proyecto establecer la frecuencia y los indicadores con los se seguirá su avance y quién será el responsable de hacer dicho seguimiento y a quién debe comunicarse la situación (en concordancia con el Plan de Comunicación del proyecto).
+%
+%El indicador de avance tiene que ser algo medible, mejor incluso si se puede medir en \% de avance. Por ejemplo,se pueden indicar en esta columna cosas como ``cantidad de conexiones ruteadeas'' o ``cantidad de funciones implementadas'', pero no algo genérico y ambiguo como ``\%'', porque el lector no sabe porcentaje de qué cosa.
+%
+%\end{consigna}
 
 \begin{longtable}{|m{1cm}|m{3.5cm}|m{2.2cm}|m{2cm}|m{3cm}|m{1.5cm}|}
 \hline
@@ -871,11 +1096,113 @@ Tarea del WBS 			& Indicador de avance & Frecuencia de reporte & Resp. de seguim
 \multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}SEGUIMIENTO DE AVANCE}                                                                       \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 Tarea del WBS & Indicador de avance & Frecuencia de reporte & Resp. de seguimiento & Persona a ser informada & Método de comunic. \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
+
+%tarea
+1 &
+%indicador avance 
+Plan de trabajo  &  
+%frecuencia  
+Única vez  &  
+%responsable  
+Sanchez Gonzalo  &  
+%a quien se informa  
+Director del proyecto y Cliente  &
+%metodo  
+email    \\ \hline
+ 
+%tarea
+2 &
+%indicador avance 
+Tabla comparativa con prestaciones vs. costo de microprocesadores y módulos Wi-Fi preseleccionados.  &  
+%frecuencia  
+semanal  &  
+%responsable  
+Sanchez Gonzalo  &  
+%a quien se informa  
+Director de proyecto  &
+%metodo  
+Documento en linea compartido y video llamada    \\ \hline
+    
+%tarea
+3 &
+%indicador avance 
+entregas parciales de código y demostraciones de módulos implementados  &  
+%frecuencia  
+quincenal  &  
+%responsable  
+Sanchez Gonzalo  &  
+%a quien se informa  
+Director de proyecto  &
+%metodo  
+repositorio GIT para la entrega de código y video llamadas para las demostraciones.    \\ \hline
+    
+%tarea
+4 &
+%indicador avance 
+Entregas parciales de esquemáticos en formato PDF y entrega final de esquemáticos como proyecto de Altium. Actualizaciones de lista de materiales y documentos con pautas para diseño del PCB  &  
+%frecuencia  
+Mensual  &  
+%responsable  
+Sanchez Gonzalo  &  
+%a quien se informa  
+Director de proyecto  &
+%metodo  
+Los archivos esquemáticos se compartirán vía Google Drive mientras que las listas de materiales y pautas para diseño de PCB serán respectivamente hojas de datos y documentos de textos compartidos online.   \\ \hline
+
+%tarea
+5 &
+%indicador avance 
+entregas parciales de código y demostración de funcionalidades sobre prototipo   &  
+%frecuencia  
+semanal  &  
+%responsable  
+Sanchez Gonzalo  &  
+%a quien se informa  
+Director de proyecto  &
+%metodo  
+repositorio GIT para la entrega de código y video llamadas para las demostraciones.    \\ \hline
+
+\end{tabularx}%
+%}
+\end{table}
+
+\begin{table}[!htpb]
+\centering
+%\begin{tabularx}{\linewidth}{@{}|X|X|X|X|X|X|@{}}
+\begin{tabularx}{\linewidth}{@{}|X|C{2.5cm}|C{3cm}|C{2cm}|C{2cm}|C{2.5cm}|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}SEGUIMIENTO DE AVANCE(continuación)}                                                                       \\ \hline
+\rowcolor[HTML]{C0C0C0} 
+Tarea del WBS & Indicador de avance & Frecuencia de reporte & Resp. de seguimiento & Persona a ser informada & Método de comunic. \\ \hline
+    
+%tarea
+6 &
+%indicador avance 
+Entregas parciales de documentación  &  
+%frecuencia  
+quincenal  &  
+%responsable  
+Sanchez Gonzalo  &  
+%a quien se informa  
+Director proyecto y cliente  &
+%metodo  
+Documentos compartidos vía Google Drive    \\ \hline
+    
+%tarea
+7 &
+%indicador avance 
+Entregas parciales de informe final y presentación para correcciones  &  
+%frecuencia  
+Semanal  &  
+%responsable  
+Sanchez Gonzalo  &  
+%a quien se informa  
+  &
+%metodo  
+Documentos compartido vía Google Drive    \\ \hline
+    
+
 \end{tabularx}%
 %}
 \end{table}
@@ -883,19 +1210,41 @@ Tarea del WBS & Indicador de avance & Frecuencia de reporte & Resp. de seguimien
 \section{17. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
+%\begin{consigna}{red}
+%Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
+%
+%\begin{itemize}
+%\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
+% - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
+%\item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas que surgieron y cómo se solucionaron:
+% - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
+%\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
+%  - Indicar esto y quién financiará los gastos correspondientes.
+%\end{itemize}
+%
+%\end{consigna}
 
+Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
 \begin{itemize}
-\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
- - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-\item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas que surgieron y cómo se solucionaron:
- - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
-  - Indicar esto y quién financiará los gastos correspondientes.
+\item Encargado: Gonzalo Daniel Sanchez.
+\item Al concluir el proyecto se realizará una reunión final del proyecto con los integrantes del área de ingeniería de Sipel SRL, el jefe del área Ezequiel Marengo, el jefe del área comercial Daniel Pluss y el gerente general de la firma Iván Brenboim. 
+\item En esta reunión se evaluará el cumplimiento del Plan de Proyecto original contrastando las fechas y carga horaria planificadas para la ejecución de las distintas etapas y las respectivas fechas y horas reales. También serán analizados los requerimientos originales y comparados con el prototipo presentado y así
+determinar el grado de objetivos cumplidos.
 \end{itemize}
 
-\end{consigna}
+Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas
+que surgieron y cómo se solucionaron:
+\begin{itemize}
+\item Encargado: Gonzalo Daniel Sanchez.
+\item Se entregará un breve informe escrito apoyado con una presentación oral y una proyección.
+\item Partiendo del análisis previamente realizado sobre las fechas y objetivos cumplidos, se recorrerán ítem por ítem señalando cuales fueron las causas de los retrasos y que fue lo permitió acelerar los tiempos en cada caso.
+\item También se realizará un breve análisis de como se podrían haber optimizado las tareas en las cuales se presentaron retrasos o excesos de horas invertidas.
+\end{itemize}
 
+Acto de agradecimiento a todos los interesados y colaboradores:
+\begin{itemize}
+\item Encargado: Gonzalo Daniel Sanchez
+\item Se agradecerá a la empresa por haberle confiado al responsable del presente proyecto el desarrollo del nuevo producto con el cual pretenden expandir su mercado.
+\end{itemize}
 
 \end{document}
