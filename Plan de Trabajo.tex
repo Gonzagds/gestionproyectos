@@ -66,8 +66,8 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.1      & Se agregan historias de usuario y se corrigen observaciones a la primer entrega                                 & 13/11/2020 \\ \hline
 1.2      & Se agregan secciones 7 a 11 & 22/11/2020\\ \hline
 1.3      & Se agregan secciones 12 a 17  \newline
- Se corrigen observaciones realizadas a las versiones 1.1 y 1.2 & xx/12/2020 \\ \hline
-1.4      & Se agregan secciones 12 a 17 & 03/12/2020\\ \hline 
+ Se corrigen observaciones realizadas a las versiones 1.1 y 1.2 & 03/12/2020 \\ \hline
+1.4      & Se corrigen observaciones realizadas a la versión 1.3  & 06/12/2020\\ \hline 
 %		   Con texto partido \newline
 %		   En varias líneas \newline
 %		   A propósito                                                     & dd/mm/aaaa \\ \hline
@@ -410,7 +410,7 @@ Para el desarrollo del presente proyecto se supone que:
 \begin{itemize}
 \item Esquemáticos.
 \item Código fuente.
-\item Transferencia tecnológica
+\item Transferencia tecnológica. Compendio de archivos que permitirán a la empresa la rápida asimilación de los nuevos conocimientos y tecnologías incorporadas durante la realización del proyecto y que contendrá la información necesaria para la puesta en producción del desarrollo. La información puede estar sustentada en archivos de texto, imágenes y/o audiovisuales.
 
 \end{itemize}
 
@@ -748,7 +748,8 @@ Referencias:
 %\end{itemize}
 
 
-%b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+
+
 
 \begin{table}[H]% [!htpb]
 \centering
@@ -774,6 +775,18 @@ Errores al documentar los requerimientos del proyecto que puedan implicar que no
        
 \end{tabularx}
 \end{table}
+
+\begin{itemize}
+\item S: Severidad del riesgo previo al plan de mitigación.
+\item O: Posibilidad de ocurrencia previo al plan de mitigación. 
+\item RPN: numero de prioridad de riego previo al plan de mitigación(El RPN se calcula como RPN=SxO). 
+\end{itemize}  
+
+\begin{itemize}
+\item S*: Severidad del riesgo posterior al plan de mitigación.
+\item O*: Posibilidad de ocurrencia posterior al plan de mitigación. 
+\item RPN*: numero de prioridad de riego posterior al plan de mitigación. 
+\end{itemize}  
 
 Criterio adoptado: 
 Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 25.
@@ -877,7 +890,7 @@ Nueva severidad = 4
 	
 \begin{itemize}
 \item Verificación: con funciones de debug que permitan leer y escribir los puertos de la placa de potencia. Las placas de potencia poseen LEDs que evidencian el estado de sus puertos no precisando otro hardware externo para estas pruebas. El cliente proveerá una placa de potencia para utilizar durante el desarrollo.
-\item Validación: Se validará junto con la demostración de los modos de automatismo detallados mas adelante.
+\item Validación: Se validará junto con la demostración de los modos de automatismo que hacen uso de las entradas y salidas de potencia.
 \end{itemize}		
 	
 \item Fuente de energía
@@ -889,10 +902,11 @@ Nueva severidad = 4
 \item Validación: Alimentando el prototipo con la fuente externa prevista para ser utilizada con el equipo.
 \end{itemize}		
 	
-	\item Opcionalmente el equipo podrá contar con una batería interna con capacidad para uso continuo de 8 horas.
-	\item Durante el diseño del circuito esquemático se hará una evaluación de costos para definir si el circuito de control de carga de la batería se implementa dentro de la placa principal del equipo base o como una placa satélite opcional.
-		\item No se implementará en el código fuente las funcionalidades de modo batería (nivel de batería, apagado automático de display, etc) debiendo implementarse en futuras revisiones a cargo de la empresa. 
-	
+	\item \label{itm:first} Opcionalmente el equipo podrá contar con una batería interna con capacidad para uso continuo de 8 horas.
+	\item \label{itm:second} Durante el diseño del circuito esquemático se hará una evaluación de costos para definir si el circuito de control de carga de la batería se implementa dentro de la placa principal del equipo base o como una placa satélite opcional.
+	\item \label{itm:third} No se implementará en el código fuente las funcionalidades de modo batería (nivel de batería, apagado automático de display, etc) debiendo implementarse en futuras revisiones a cargo de la empresa. 
+
+Nota: Los ítems \ref{itm:first} , \ref{itm:second} , \ref{itm:third} verificarán y validarán simultáneamente. 	
 \begin{itemize}
 \item Verificación: verificando los costos con cotizaciones parciales durante el desarrollo y revisando los cálculos de consumo y diseño de la etapa de carga de batería.
 \item Validación: Con ensayos de autonomía de uso del prototipo alimentado con la batería.
@@ -925,7 +939,7 @@ Nueva severidad = 4
 	\item Este menú también debe permitir realizar las acciones de toma de cero de calibración y ajuste con peso patrón en hasta 3 puntos.
 	
 \begin{itemize}
-\item Verificación: con funciones de debug que simulen la lectura de peso y simulando el ajuste del equipo con 1, 2 y tres puntos de peso patrón.
+\item Verificación: con funciones de debug que simulen la lectura de peso y simulando el ajuste del equipo con 1, 2 y 3 puntos de peso patrón.
 \item Validación: mediante demostraciones de entregas parciales y durante el proceso de ajuste realizados sobre el prototipo previo a la realización de ensayos metrológicos.
 \end{itemize}		
 	
